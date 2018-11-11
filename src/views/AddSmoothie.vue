@@ -43,9 +43,11 @@ export default {
   }),
   methods: {
     AddSmoothie() {
-      if (this.title && this.ingredients.length > 0) {
+      if (this.title && (this.ingredients.length > 0 || this.ingredient)) {
         this.feedback = null;
-
+        if (this.ingredient) {
+          this.ingredients.push(this.ingredient);
+        }
         // console.log(this.slug);
 
         db.collection('smoothies')
