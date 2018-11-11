@@ -7,7 +7,7 @@ dotenv.config();
 //   config = require('./dev.env.js');
 // }
 
-console.log(process.env.VUE_APP_API_KEY);
+console.log(process.env);
 
 const keys = {
   apiKey: process.env.VUE_APP_API_KEY,
