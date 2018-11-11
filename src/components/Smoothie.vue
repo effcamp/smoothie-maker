@@ -34,9 +34,9 @@ export default {
 
 <style>
 .smoothie {
-  margin-top: 20px;
+  margin: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 .smoothie h2 {
@@ -61,5 +61,12 @@ export default {
 }
 .smoothie .delete:hover {
   color: black;
+}
+@media screen and (min-width: 650px) {
+  .smoothie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px auto;
+  }
 }
 </style>

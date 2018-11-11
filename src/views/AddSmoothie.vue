@@ -4,20 +4,26 @@
     <form @submit.prevent>
       <div class="field title">
         <label for="title">Smoothie Title:</label>
-        <input type="text" name="title" id="title" v-model="title">
+        <input type="text" name="title" id="title" v-model="title" @keypress.enter.prevent>
       </div>
       <div v-for=" (ing, i) in ingredients" :key="i" class="field">
         <label for="ingredient">Ingredient:</label>
-        <input type="text" name="ingredient" id="ingredient" v-model="ingredients[i]">
+        <input
+          type="text"
+          name="ingredient"
+          id="ingredient"
+          v-model="ingredients[i]"
+          @keypress.enter.prevent
+        >
         <i class="material-icons delete" @click="deleteIng(ing)">delete</i>
       </div>
       <div class="field add-ingredient">
-        <label for="add-ingredient">Add an ingredient (use tab to add another):</label>
+        <label for="add-ingredient">Add an ingredient (hit enter to add new ingredient):</label>
         <input
           type="text"
           name="add-ingredient"
           id="add-ingredient"
-          @keydown.tab.prevent="addIng"
+          @keydown.enter.prevent="addIng"
           v-model="ingredient"
         >
       </div>
