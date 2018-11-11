@@ -1,13 +1,5 @@
 import firebase from 'firebase/app';
 import firestore from 'firebase/firestore';
-import dotenv from 'dotenv';
-dotenv.config();
-// // Initialize Firebase
-// if (!(process.env.NODE_ENV === 'production')) {
-//   config = require('./dev.env.js');
-// }
-
-console.log(process.env);
 
 const keys = {
   apiKey: process.env.VUE_APP_API_KEY,
