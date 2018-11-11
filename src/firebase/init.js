@@ -1,20 +1,21 @@
 import firebase from 'firebase/app';
-import firestore from 'firebase/firestore/';
-let config = {};
-// Initialize Firebase
-if (!(process.env.NODE_ENV === 'production')) {
-  config = require('./dev.env.js');
-}
+import firestore from 'firebase/firestore';
+import dotenv from 'dotenv';
+dotenv.config();
+// // Initialize Firebase
+// if (!(process.env.NODE_ENV === 'production')) {
+//   config = require('./dev.env.js');
+// }
 
-console.log(process.env);
+console.log(process.env.VUE_APP_API_KEY);
 
 const keys = {
-  apiKey: config.apiKey || process.env.API_KEY,
-  authDomain: config.authDomain || process.env.AUTH_DOMAIN,
-  databaseURL: config.databaseURL || process.env.DATABASE_URL,
-  projectId: config.projectId || process.env.PROJECT_ID,
-  storageBucket: config.storageBucket || process.env.STORAGE_BUCKET,
-  messagingSenderId: config.storageBucket || process.env.MESSAGING_SENDER_ID
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_DATABASE_URL,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID
 };
 const firebaseApp = firebase.initializeApp(keys);
 firebaseApp.firestore().settings({ timestampsInSnapshots: true });
