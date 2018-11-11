@@ -6,6 +6,8 @@ if (!(process.env.NODE_ENV === 'production')) {
   config = require('./dev.env.js');
 }
 
+console.log(process.env);
+
 const keys = {
   apiKey: config.apiKey || process.env.API_KEY,
   authDomain: config.authDomain || process.env.AUTH_DOMAIN,
