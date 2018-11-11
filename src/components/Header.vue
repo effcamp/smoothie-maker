@@ -26,4 +26,7 @@ export default {
 </script>
 
 <style>
+.nav-content {
+  padding: 0 20px;
+}
 </style>
