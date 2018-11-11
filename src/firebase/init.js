@@ -1,9 +1,9 @@
 import firebase from 'firebase/app';
 import firestore from 'firebase/firestore/';
-
+let config = null;
 // Initialize Firebase
 if (!(process.env.NODE_ENV === 'production')) {
-  const config = require('./dev.env.js');
+  config = require('./dev.env.js');
 }
 const keys = {
   apiKey: config.apiKey || process.env.API_KEY,
