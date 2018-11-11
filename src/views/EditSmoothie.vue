@@ -50,7 +50,7 @@ export default {
   methods: {
     EditSmoothie() {
       if (
-        this.title &&
+        this.smoothie.title &&
         (this.smoothie.ingredients.length > 0 || this.ingredient)
       ) {
         this.feedback = null;

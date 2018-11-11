@@ -1,6 +1,7 @@
-import firebase from 'firebase';
-import firestore from 'firebase/firestore';
+import firebase from 'firebase/app';
+import firestore from 'firebase/firestore/';
 // Initialize Firebase
+
 var config = {
   apiKey: 'AIzaSyBNSP_dBVJOzhK7oUB_sNLqwE_mkJ-TNY4',
   authDomain: 'smoothie-maker-5a340.firebaseapp.com',
